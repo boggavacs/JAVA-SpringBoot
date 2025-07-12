@@ -1,0 +1,53 @@
+@AUTH_USER = admin
+@AUTH_PASS = password
+
+###
+
+# GET workout endpoint
+GET http://localhost:8080/actuator/health HTTP/1.1
+
+###
+
+GET http://localhost:8080/actuator/info HTTP/1.1
+Authorization: Basic {{AUTH_USER}}:{{AUTH_PASS}}
+
+
+###
+
+GET http://localhost:8080/actuator/beans HTTP/1.1
+Authorization: Basic {{AUTH_USER}}:{{AUTH_PASS}}
+
+###
+
+GET http://localhost:8080/actuator/mappings HTTP/1.1
+Authorization: Basic {{AUTH_USER}}:{{AUTH_PASS}}
+
+
+###
+
+GET http://localhost:8080/coach HTTP/1.1
+Authorization: Basic {{AUTH_USER}}:{{AUTH_PASS}}
+
+###
+
+GET http://localhost:8080/listings HTTP/1.1
+Authorization: Basic {{AUTH_USER}}:{{AUTH_PASS}}
+
+###
+
+curl --request GET www.google.com
+
+###
+
+GET http://localhost:8080/users HTTP/1.1
+Authorization: Basic {{AUTH_USER}}:{{AUTH_PASS}}
+
+###
+
+GET http://localhost:8080/generic HTTP/1.1
+Authorization: Basic {{AUTH_USER}}:{{AUTH_PASS}}
+
+###
+
+GET http://localhost:8080/coach HTTP/1.1
+Authorization: Basic {{AUTH_USER}}:{{AUTH_PASS}}

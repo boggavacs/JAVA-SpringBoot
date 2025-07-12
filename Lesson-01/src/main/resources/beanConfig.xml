@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+         http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Bean definition for JobListBean -->
+    <bean id="jobListBean" class="ro.hms.hmsexperience.model.JobListBean">
+        <property name="jobPosition" value="Software Engineer"/>
+        <property name="experience" value="3 years"/>
+        <property name="jobId" value="101"/>
+    </bean>
+
+</beans>
