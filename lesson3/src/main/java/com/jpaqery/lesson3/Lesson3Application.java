@@ -25,8 +25,19 @@ public class Lesson3Application {
 
 			// void AddJobListing(jobListingDAO);
 
-			getJobListById(jobListingDAO);
+			// getJobListById(jobListingDAO);
+
+			// JPQLQueryToGetJobListings(jobListingDAO);
+
+			// updateJoblisting(jobListingDAO);
+			updateUsingQuery(jobListingDAO);
 		};
+	}
+
+	private void updateUsingQuery(JobListingDAO jobListingDAO) {
+
+		int jobListingId = 2;
+		jobListingDAO.updateViaJPQLQuery(jobListingId);
 	}
 
 	private void AddJobListing(JobListingDAO jobListingDAO) {
@@ -54,6 +65,20 @@ public class Lesson3Application {
 		System.out.println(jid);
 		JobListing lt = jobListingDAO.findById(jid);
 		System.out.println(lt);
+	}
+
+	private void JPQLQueryToGetJobListings(JobListingDAO jobListingDAO) {
+		List<JobListing> jobl = jobListingDAO.findAll();
+		for (JobListing j : jobl) {
+			System.out.println(j + "\n");
+		}
+	};
+
+	private void updateJoblisting(JobListingDAO jobListingDAO) {
+		int joblistingId = 3;
+		JobListing listing = jobListingDAO.findById(joblistingId);
+		listing.setCompany("Random Company");
+		jobListingDAO.update(listing);
 	}
 
 	// private List<JobListing> findById(JobListingDAO jobListingDAO) {
